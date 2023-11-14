@@ -2,6 +2,9 @@ package models4userus
 
 import (
 	"fmt"
+	"net/mail"
+	"strings"
+
 	"github.com/bots-go-framework/bots-fw-store/botsfwmodels"
 	"github.com/dal-go/dalgo/dal"
 	"github.com/sneat-co/sneat-core-modules/contactus/briefs4contactus"
@@ -9,8 +12,6 @@ import (
 	"github.com/sneat-co/sneat-go-core/models/dbmodels"
 	"github.com/strongo/slice"
 	"github.com/strongo/validation"
-	"net/mail"
-	"strings"
 )
 
 type WithUserIDs struct {
@@ -163,10 +164,12 @@ func (v *UserDto) validateTeams() error {
 			if err := t.Validate(); err != nil {
 				return validation.NewErrBadRecordFieldValue(fmt.Sprintf("teams[%s]{title=%v}", teamID, t.Title), err.Error())
 			}
-			for i, title := range teamTitles {
-				if t.Title == title {
-					return validation.NewErrBadRecordFieldValue("teams",
-						fmt.Sprintf("at least 2 teams (%s & %s) with same title: %s", teamID, teamIDs[i], title))
+			if len(v.Teams) > i {
+				for i, title := range teamTitles {
+					if t.Title == title {
+						return validation.NewErrBadRecordFieldValue("teams",
+							fmt.Sprintf("at least 2 teams (%s & %s) with same title: %s", teamID, teamIDs[i], title))
+					}
 				}
 			}
 			teamIDs = append(teamIDs, teamID)
