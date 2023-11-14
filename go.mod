@@ -1,4 +1,4 @@
-module github.com/sneat-co/sneat-core-modules
+module github.com/AlmaniaM/sneat-core-modules
 
 go 1.21.4
 
