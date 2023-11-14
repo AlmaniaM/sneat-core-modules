@@ -21,6 +21,8 @@ github.com/gosimple/unidecode v1.0.1 h1:hZzFTMMqSswvf0LBJZCZgThIZrpDHFXux9KeGmn6
 github.com/gosimple/unidecode v1.0.1/go.mod h1:CP0Cr1Y1kogOtx0bJblKzsVWrqYaqfNOnHzpgWw4Awc=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
+github.com/sneat-co/sneat-core-modules v0.9.3 h1:xuHa5Z/YJRhLZKbZIurKyPpsRgjWNyoT9Cq4pQfqH4Y=
+github.com/sneat-co/sneat-core-modules v0.9.3/go.mod h1:ZLxvCYlEjjY9CXwj+QMQZssBEo/WGTHuPAo88cytlsM=
 github.com/sneat-co/sneat-go-core v0.18.0 h1:f+uZmboCUri2YVghYfhWXslmTlk7AQtymtRf2EOSVsY=
 github.com/sneat-co/sneat-go-core v0.18.0/go.mod h1:3lI22kWFlTBZsuFJZX2yKMKmBUSRSUnwTcE+4QRgIjw=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
